@@ -1,0 +1,599 @@
+//META{"name":"Chiaki_Nanami","description":"Chiaki Nanami Danganronpa Theme","author":"Lunasa","version":"1.0"}*//
+
+/* ==========================================================================
+   BACKGROUND AND TRANSPARENCIES 
+   ========================================================================== */
+.app {
+    background-position: center;
+}
+.app {
+    background-image: url(https://cdn.rawgit.com/LunasaPrismriver/chiaki_BD_theme/master/img/background.jpg) !important;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.links,  
+.typing,
+.chat,
+.content,
+.channels-wrap,
+.messages-wrapper,
+.private-channels,  
+.divider-red span,  
+#voice-connection {
+    background: transparent !important;
+}
+
+/* ==========================================================================
+   CHAT (MIDDLE)
+   ========================================================================== */
+/*avatar*/
+.chat .avatar-large:hover {
+	opacity: 1 !important;
+	animation-name: pulse_B;
+	animation-duration: 0.6s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	margin-left: none;
+	position: relative;
+	top: 2px;
+}
+.avatar-large {
+    width: 70px;
+    height: 70px;
+    background-size: 70px 70px;
+    border-radius: 15px;
+    margin-left: none;
+    position: relative;
+    top: 2px;
+}
+/*emoji button*/
+.channel-textarea-emoji>.sprite-item {
+	width: 26px;
+	height: 24px;
+	background-image: url(https://cdn.rawgit.com/LunasaPrismriver/chiaki_BD_theme/master/img/hairclip.png) !important;
+	background-size: 26px 24px !important;
+	background-position: 0px 0px !important;
+	opacity: 1;
+	-webkit-filter: grayscale(50%);
+	filter: grayscale(50%);
+}
+.channel-textarea-emoji.hovered .sprite-item,
+.channel-textarea-emoji.popout-open .sprite-item {
+	opacity: 1 !important;
+	filter: none !important;
+	-webkit-filter: none !important;
+	animation-name: pulse_A;
+	animation-duration: 0.6s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+/*messages*/
+.chat .messages {
+	background: rgba(255, 125, 125, 0.1);
+	box-shadow: inset 0px 3px 2px rgba(255, 125, 125, 0.4), inset 0px 0px 2px rgba(255, 125, 125, 0.4);
+}
+.message-group .comment .markup {
+	color: rgba(255, 255, 255, 1) !important;
+	line-height: 1.3em;
+	margin: 3px 0px !important;
+	font-family: Pixel;
+	word-spacing: -0.15em;
+}
+.message-group .comment {
+	background: rgba(255, 125, 125, 0.4) !important;
+	box-shadow: inset 2px 2px 5px rgba(255, 200, 200, 0.3);
+	border-radius: 15px;
+	padding: 10px 20px !important;
+	margin-right: 0px !important;
+}
+.message-group {
+	border: 0px !important;
+	background: rgba(255, 200, 200, 0.4);
+	box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+	border-radius: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.message-group h2 .timestamp {
+	color: rgba(255, 255, 255, 1) !important;
+	font-family: Pixel;
+	word-spacing: -0.15em;
+}
+.message-group .comment .edited {
+	color: rgba(255, 255, 255, 0.7) !important;
+}
+.chat .user-name {
+	font-family: Pixel;
+}
+.message-group .comment .markup code.inline {
+	background: rgba(255, 200, 200, 0.3) !important;
+	box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.4);
+	font-family: Pixel;
+	font-size: 85%;
+	padding: 0.2em !important;
+	word-spacing: -0.15em;
+}
+.theme-dark .message-group .comment .markup pre {
+	border-color: rgba(255, 255, 255, 1);
+	background: rgba(255, 200, 200, 0.3) !important;
+	font-family: Pixel;
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+}
+.message-group .comment .markup pre code {
+	background: transparent !important;
+	color: rgb(255, 255, 255);
+	font-family: Pixel;
+}
+.message-group .mentioned .message-text {
+	background: rgba(255, 200, 200, 0.3) !important;
+	animation-name: blink_B;
+	animation-duration: 1s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	margin: 5px 0px;
+}
+.message-group .mentioned .message-text:after {
+	background: rgba(255, 200, 200, 0.5);
+	border-color: rgba(255, 255, 255, 0.5);
+}
+.mentioned .highlight {
+	background: transparent !important;
+}
+.mentioned .highlight:hover {
+	color: rgba(255, 0, 225, 1) !important;
+	background: rgba(255, 255, 255, 0.4) !important;
+	text-decoration: none;
+	padding: 2px 0px;
+	text-shadow: 1px 1px 3px rgba(125, 125, 125, 0.5);
+}
+.highlight {
+	color: rgba(255, 0, 225, 1);
+	background: transparent !important;
+}
+.highlight:hover {
+	color: rgba(255, 0, 225, 1) !important;	
+	text-decoration: none;
+	background: rgba(255, 255, 255, 0.4) !important;
+	box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.9), inset 0px 0px 10px rgba(255, 200, 200, 0.8);
+	text-shadow: 1px 1px 3px rgba(125, 125, 125, 0.5);
+	padding: 2px 0px;
+}
+.message-group a:hover {
+	text-decoration: none !important;
+	background: rgba(255, 255, 255, 0.4) !important;
+	box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.9), inset 0px 0px 10px rgba(255, 200, 200, 0.8);
+	text-shadow: 1px 1px 3px rgba(125, 125, 125, 0.5);
+}
+.message-group .message .markup a {
+	color: rgba(255, 0, 225, 1);
+	word-spacing: -0.15em;
+}
+.embed .embed-thumbnail:hover {
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
+.message-group .comment .attachment-image a, 
+.message-group .comment .attachment-image canvas, 
+.message-group .comment .attachment-image img {
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
+.modal .download-button {
+	font-family: Pixel;
+}
+.embed {
+	font-family: Pixel;
+	background-color: rgba(255, 200, 200, 0.3);
+}
+.embed.embed-inline {
+	background-color: transparent !important;
+}
+.embed .embed-provider {
+	margin-bottom: 0px;
+}
+.embed .embed-author {
+	padding-bottom: 0px;
+}
+.embed .embed-title {
+	color: rgb(255, 0, 225) !important
+}
+.system-message {
+	font-family: Pixel;
+	font-size: 95%;
+	color: rgba(255, 255, 255, 1) !important;
+	word-spacing: -0.15em !important;
+}
+.system-message-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+.system-message .system-message-content .system-message-timestamp {
+	color: rgba(255, 255, 255, 1);
+	word-spacing: -0.15em !important;
+	margin-left: 0px;
+}
+.system-message .system-message-content a {
+	color: rgba(255, 0, 225, 1) !important;
+	word-spacing: -0.15em;
+	margin: 0px 2px;
+}
+.chat .user-name:hover {
+	text-decoration: none !important;
+	background: rgba(255, 255, 255, 0.4) !important;
+	box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.9); 
+	text-shadow: 1px 1px 3px rgba(125, 125, 125, 0.5);	
+}
+.chat .new-messages-bar button {
+	font-family: Pixel;
+	background: rgb(255, 0, 225);
+}
+.chat .new-messages-bar button:last-child {
+	color: rgba(255, 255, 255, 0.5);
+}
+.chat .jump-to-present-bar button {
+	background: rgb(255, 0, 225);
+	font-family: Pixel;
+}
+/*chat form area*/
+.chat form {
+	border-top: none !important;
+	background: rgba(255, 125, 125, 0.1);
+	box-shadow: inset 0px 0px 2px rgba(255, 125, 125, 0.4), inset 0px -3px 2px rgba(255, 125, 125, 0.4);
+	margin: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.channel-textarea-inner {
+	border-color: rgba(255,255,255, 0.8) !important;
+	background-color: rgba(255, 200, 200, 0.3) !important;
+}
+.channel-textarea-inner textarea {
+	display: flex;
+	color: rgba(255, 255, 255, 1) !important;
+	font-family: Pixel;
+}
+.channel-textarea-inner textarea::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.6) !important;
+}
+.channel-textarea.channel-textarea-disabled {
+	opacity: 1 !important;
+}
+.channel-textarea.channel-textarea-disabled textarea{
+	text-align: center;
+}
+.channel-textarea-upload {
+	background: transparent !important;
+	opacity: 1;
+	border-right: 2px solid rgba(255, 255, 255, 0.8) !important;
+}
+.channel-textarea-upload:after {
+	content: ' ';
+	background-image: url(/assets/623ccc7d43748a9622c078748ea9e706.svg) !important;
+	background-position: center;
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	display: block;
+	position: relative;
+	width: 100% !important;
+	height: 100% !important;
+	opacity: 0.5;
+}
+.channel-textarea-upload:hover:after {
+	content: ' ';
+	background-image: url(/assets/623ccc7d43748a9622c078748ea9e706.svg) !important;
+	background-position: center;
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	display: block;
+	position: relative;
+	width: 100% !important;
+	height: 100% !important;
+	animation-name: pulse_A;
+	animation-duration: 0.6s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+.typing .ellipsis {
+	display: none;
+}
+.typing .text {
+	color: rgba(255, 255, 255, 1) !important;
+	font-family: Pixel;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 80%;
+	display: inline-flex;
+	word-spacing: -0.25em;
+}
+.typing strong {
+	margin: 0px 2px;
+}
+/*message editing*/
+.message-group .edit-message .avatar-large {
+	display: none;
+}
+.message-group .edit-message {
+	padding-left: 60px;
+}
+/*message dividers*/
+.chat .divider>span {
+	background: transparent !important;
+	color: rgba(255, 255, 255, 1) !important;
+	font-family: Pixel;
+}
+.chat .divider.divider-red>span {
+	display: none;
+}
+.theme-dark .friends-table .messages .divider span, 
+.theme-dark .friends-table .messages .divider:before, 
+.theme-dark .messages-wrapper .messages .divider span, 
+.theme-dark .messages-wrapper .messages .divider:before {
+    background-color: transparent;
+}
+.theme-dark .friends-table .messages .divider.divider-red>div,
+.theme-dark .messages-wrapper .messages .divider.divider-red>div {
+	display: none;
+}
+.chat .divider>div {
+    opacity: 0;
+}
+/* chat scroll bar*/
+.theme-dark .friends-table .scroller-wrap ::-webkit-scrollbar-thumb,
+.theme-dark .messages-wrapper .scroller-wrap ::-webkit-scrollbar-thumb {
+	background: rgba(255, 125, 125, 0.5);
+	border: 0px;
+	box-shadow: inset 2px 2px 3px rgba(255, 200, 200, 0.4);
+}
+.theme-dark .friends-table .scroller-wrap ::-webkit-scrollbar-track-piece,
+.theme-dark .messages-wrapper .scroller-wrap ::-webkit-scrollbar-track-piece {
+	background: transparent;
+	border: none;
+}
+
+/* ==========================================================================
+   CHANNEL MEMBERS (RIGHT SIDE)
+   ========================================================================== */
+.channel-members-wrap {
+    min-width: 240px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+}
+.channel-members {
+	background: rgba(255, 125, 125, 0.1) !important;
+	box-shadow: inset 0px 3px 2px rgba(255, 125, 125, 0.4), inset -3px -3px 2px rgba(255, 125, 125, 0.4);
+	padding-left: 14px !important;
+}
+.channel-members .member .member-activity {
+	color: rgba(255, 255, 255, 0.6);
+}
+.channel-members .member {
+	background: rgba(255, 200, 200, 0.4);
+	box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+	padding-left: 16px !important;
+	border-radius: 15px;
+	font-family: Pixel;
+	margin: 6px 5px 0px 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.channel-members .member:hover,
+.channel-members .member.popout-open {
+	background: rgba(255, 125, 125, 0.4) !important;
+	box-shadow: inset 2px 2px 5px rgba(255, 200, 200, 0.3);
+}
+.channel-members h2 {
+	background: rgba(255, 125, 125, 0.4);
+	box-shadow: inset 2px 2px 5px rgba(255, 200, 200, 0.3);
+	color: rgba(255, 255, 255, 1) !important;
+	text-align: center;
+	border-radius: 25px;
+	font-family: Pixel;
+	margin: 0px 5px 6px 5px !important;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.channel-members .member+h2 {
+	margin: 21px 5px 6px 5px !important;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.channel-members .member .member-username {
+	font-size: 14px !important;
+}
+.channel-members .member .member-activity {
+	font-size: 9px;
+}
+/* members scroll bar*/
+.scroller-wrap.dark .scroller::-webkit-scrollbar-thumb {
+	background: rgba(255, 125, 125, 0.5) !important;
+	border: 0px !important;
+	box-shadow: inset 2px 2px 3px rgba(255, 200, 200, 0.4) !important;
+}
+
+/* ==========================================================================
+   CHANNEL AND SERVER LIST (LEFT SIDE)
+   ========================================================================== */
+/* channel list */
+.guilds-wrapper {
+	background: transparent;
+}
+.guild-channels {
+	background: rgba(255, 125, 125, 0.1);
+	box-shadow: inset 3px 3px 2px rgba(255, 125, 125, 0.4), inset 0px 0px 2px rgba(255, 125, 125, 0.4);
+	padding-left: 14px;
+	margin-top: 1px;
+}
+.scroller .guild-channels {
+	flex-basis: auto !important;
+}
+.guild-channels .channel-text.selected:before {
+    border-left: 0px
+}
+.guild-channels .channel-text:hover.channel-muted:before,
+.guild-channels .channel-text:hover:not(.unread):before {
+	border-left: 0px;
+}
+.guild-channels .channel-text {
+	background-color: rgba(255, 200, 200, 0.4);
+	box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+	border-radius: 15px;
+	font-family: Pixel;
+	font-size: 12px;
+	margin: 8px 5px 0px 5px;
+}
+.guild-channels .channel-text a {
+	opacity: 1;
+	color: rgba(255, 255, 255, 0.5);
+	text-shadow: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.guild-channels .channel-text.selected {
+	background: rgba(255, 125, 125, 0.4);
+	box-shadow: inset 2px 2px 5px rgba(255, 200, 200, 0.3);
+}
+.guild-channels .channel-text:hover {
+	background: rgba(255, 125, 125, 0.4);
+	box-shadow: inset 2px 2px 5px rgba(255, 200, 200, 0.3);
+}
+.guild-channels .channel-text.unread:not(.selected):not(.channel-muted):before {
+	display: none;
+}
+.guild-channels .channel-text .channel-name:before {
+	content:' ';
+	background-image: url("https://cdn.rawgit.com/LunasaPrismriver/chiaki_BD_theme/master/img/Present_Gamer's_Backpack..svg");
+	background-size: 18px 18px;
+	background-position: center;
+	display: inline-block !important;
+	height: 18px;
+	width: 18px;
+	vertical-align: middle;
+	opacity: 0.5;
+}
+.guild-channels .channel-text:hover .channel-name:before,
+.guild-channels .channel-text.selected .channel-name:before,
+.guild-channels .channel-text.unread:not(.selected):not(.channel-muted) .channel-name:before {
+	opacity: 1;
+}
+.guild-channels header {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: Pixel;
+	opacity: 0.5;
+	padding-left: 6px;
+	text-align: center;
+	background-color: rgba(255, 125, 125, 0.4);
+	box-shadow: inset 2px 2px 5px rgba(255, 200, 200, 0.3);
+	border-radius: 25px;
+	opacity: 1;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.guild-channels header:hover {
+	color: rgba(255, 255, 255, 1);
+}
+.guild-channels header button:after {
+	background-image: url("https://i.imgur.com/iseBH3K.png");
+	opacity: 0.5;
+}
+.guild-channels .channel-voice {
+	background-color: rgba(255, 200, 200, 0.4);
+	box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+	border-radius: 15px;
+	font-family: Pixel;
+	font-size: 12px;
+	margin: 8px 5px 0px 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.guild-channels .channel-voice a{
+	text-shadow: none;
+	padding: 1px 0px;
+}
+.guild-channels .channel-voice:hover {
+	background-color: rgba(255, 125, 125, 0.4);
+}
+.guild-channels .channel-voice:hover a{
+	opacity: 1;
+}
+.guild-channels .channel-voice.audio {
+	background-color: rgba(255, 125, 125, 0.4);
+}
+.guild-channels .channel-voice .channel-arrow:hover {
+	background-color: rgba(255, 200, 200, 0.5);
+}
+.guild-channels .channel-voice-states {
+	padding-left: 0px;
+}
+/* account profile */
+.account {
+	background: rgba(255, 125, 125, 0.1);
+	box-shadow: inset 3px 0px 2px rgba(255, 125, 125, 0.4), inset 0px -3px 2px rgba(255, 125, 125, 0.4);
+	border-top: none
+}
+.account .account-details {
+	font-family: Pixel !important;
+	font-size: 80%;
+}
+
+/* ==========================================================================
+   HEADERS
+   ========================================================================== */
+.guild-header header{
+	background-color: transparent;
+	box-shadow: none !important;
+}
+.chat>.title-wrap {
+	background: transparent !important;
+	border-bottom: none !important;
+	box-shadow: none !important;
+}
+
+/* ==========================================================================
+   MISC
+   ========================================================================== */
+.tooltip {
+	font-family: Pixel;
+	background: rgb(255, 0, 225) !important;
+	box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.6) !important;
+	word-spacing: -0.15em !important;
+	font-size: 10px;
+	padding: 5px 5px;
+}
+.tooltip:after {
+	border-color: transparent !important;
+}
+.bot-tag {
+	background: rgba(255, 0, 225, 0.7);
+}
+.badge {
+	background-color: rgb(255, 0, 225);
+	font-family: Pixel;
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+@keyframes pulse_A{
+	from {transform: scale(1);}
+	to {transform: scale(1.25);}
+}
+@keyframes pulse_B{
+	from {transform: scale(1);}
+	to {transform: scale(1.1);}
+}
+
+/* ==========================================================================
+   FONT
+   ========================================================================== */
+@font-face {
+	font-family: Pixel;
+	src: url(https://cdn.rawgit.com/LunasaPrismriver/chiaki_BD_theme/master/fonts/unifont-9.0.04.ttf);
+}
